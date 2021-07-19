@@ -5,7 +5,7 @@
 local transformer_model = "SpanBERT/spanbert-large-cased";
 local max_length = 512;
 local feature_size = 20;
-local max_span_width = 30;
+local max_span_width = 10;
 
 local transformer_dim = 1024;  # uniquely determined by transformer_model
 local span_embedding_dim = 3 * transformer_dim + feature_size;
