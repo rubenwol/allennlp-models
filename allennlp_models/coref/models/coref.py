@@ -98,7 +98,7 @@ class CoreferenceResolver(Model):
         self._endpoint_span_extractor = EndpointSpanExtractor(
             context_layer.get_output_dim(),
             combination="x,y",
-            num_width_embeddings=max_span_width,
+            num_width_embeddings=10,
             span_width_embedding_dim=feature_size,
             bucket_widths=False,
         )
@@ -112,7 +112,7 @@ class CoreferenceResolver(Model):
             embedding_dim=feature_size, num_embeddings=self._num_distance_buckets
         )
 
-        self._max_span_width = max_span_width
+        self._max_span_width = 10
         self._spans_per_word = spans_per_word
         self._max_antecedents = max_antecedents
 

@@ -63,7 +63,7 @@ class ConllCorefReader(DatasetReader):
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
-        self._max_span_width = max_span_width
+        self._max_span_width = 10
         self._token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer()}
         self._wordpiece_modeling_tokenizer = wordpiece_modeling_tokenizer
         self._max_sentences = max_sentences
